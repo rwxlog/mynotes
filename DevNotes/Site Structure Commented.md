@@ -6,14 +6,14 @@
 - contact.html (contact page)
 - portfolio.html (portfolio page)
 - posts.html (posts index page)
-- posts/
-  - post1.html (example post 1)
-  - post2.html (example post 2)
-  - post3.html (example post 3)
 - pages/
   - page1.html (example static page 1)
   - page2.html (example static page 2)
   - page3.html (example static page 3)
+- posts/
+  - post1.html (example post 1)
+  - post2.html (example post 2)
+  - post3.html (example post 3)
 - css/
   - style.css (main stylesheet)
   - responsive.css (responsive/mobile styles)
@@ -30,14 +30,14 @@
 - contact.html (contact page)
 - portfolio.html (portfolio page)
 - posts.html (posts index page)
-- posts/
-  - post1.html (example post 1)
-  - post2.html (example post 2)
-  - post3.html (example post 3)
 - pages/
   - page1.html (example static page 1)
   - page2.html (example static page 2)
   - page3.html (example static page 3)
+- posts/
+  - post1.html (example post 1)
+  - post2.html (example post 2)
+  - post3.html (example post 3)
 - components/
   - header.html (header partial with logo and navigation)
   - footer.html (footer partial with scripts/copyright)
@@ -56,25 +56,6 @@
 
 ## Hugo Structure
 - config.toml (main Hugo configuration: site title, URL, etc.)
-- static/ (public static assets)
-  - css/
-    - style.css (main stylesheet)
-    - responsive.css (responsive/mobile styles)
-  - js/
-    - theme.js (site JavaScript for UI interactions)
-  - images/
-    - logo.png (site logo)
-- layouts/ (templates controlling content rendering)
-  - _default/
-    - baseof.html (base template with header/footer wrapper)
-    - list.html (section/category/tag list template)
-    - page.html (static page template)
-    - single.html (single blog post template)
-  - posts/
-    - list.html (custom posts list template)
-  - partials/
-    - header.html (header partial)
-    - footer.html (footer partial)
 - content/ (all content in Markdown)
   - pages/
     - about.md (about page)
@@ -88,11 +69,47 @@
     - custom1.md (example custom post 1)
     - custom2.md (example custom post 2)
     - custom3.md (example custom post 3)  
+- layouts/ (templates controlling content rendering)
+  - _default/
+    - baseof.html (base template with header/footer wrapper)
+    - list.html (section/category/tag list template)
+    - page.html (static page template)
+    - single.html (single blog post template)
+  - posts/
+    - list.html (custom posts list template)
+  - partials/
+    - header.html (header partial)
+    - footer.html (footer partial)
+  - index.html (homepage)
+- static/ (public static assets)
+  - css/
+    - style.css (main stylesheet)
+    - responsive.css (responsive/mobile styles)
+  - js/
+    - theme.js (site JavaScript for UI interactions)
+  - images/
+    - logo.png (site logo)
 
 ---
 
 ## Jekyll Structure
 - _config.yml (main Jekyll configuration: site title, URL, plugins)
+- index.md (homepage content, layout: home)
+- 404.html (custom 404 page, layout: page)
+- pages/ (custom static pages)
+  - about.md (about page, layout: page)
+  - contact.md (contact page, layout: page)
+  - portfolio.md (portfolio page, layout: page)
+  - posts.md (blog index, layout: list)
+  - custom.md (custom collection, layout: list)
+- _posts/ (blog posts in YYYY-MM-DD-title.md format)
+  - 2025-09-22-post-001.md (example post 1)
+  - 2025-09-23-post-002.md (example post 2)
+  - 2025-09-23-post-003.md (example post 3)
+- _custom/ (custom collection posts in any-title.md format)
+  - post-001.md (custom post 1)
+  - post-002.md (custom post 2)
+  - post-003.md (custom post 3)
 - _includes/ (reusable template snippets)
   - header.html (header with logo, nav, topbar)
   - footer.html (footer with scripts/copyright)
@@ -103,14 +120,6 @@
   - post.html (layout for single blog post)
   - list.html (layout for posts index)
   - page.html (layout for static pages)
-- _posts/ (blog posts in YYYY-MM-DD-title.md format)
-  - 2025-09-22-post-001.md (example post 1)
-  - 2025-09-23-post-002.md (example post 2)
-  - 2025-09-23-post-003.md (example post 3)
-- _custom/ (custom collection posts in any-title.md format)
-  - post-001.md (custom post 1)
-  - post-002.md (custom post 2)
-  - post-003.md (custom post 3)
 - assets/ (custom assets: CSS/JS/images)
   - css/
     - style.css (main stylesheet)
@@ -119,11 +128,46 @@
     - main.js (custom JavaScript)
   - images/
     - logo.png (site logo)
+
+---
+
+# Eleventy Structure
+
+- .eleventy.js (Eleventy config file)
+- package.json (Project metadata & npm scripts)
+- index.md (homepage content, layout: home)
+- 404.html (custom 404 page, layout: page)
 - pages/ (custom static pages)
   - about.md (about page, layout: page)
   - contact.md (contact page, layout: page)
   - portfolio.md (portfolio page, layout: page)
   - posts.md (blog index, layout: list)
   - custom.md (custom collection, layout: list)
-- index.md (homepage content, layout: home)
-- 404.html (custom 404 page, layout: page)
+- posts/ (blog posts in markdown format)
+  - 2025-09-22-post-001.md (example post 1)
+  - 2025-09-23-post-002.md (example post 2)
+  - 2025-09-23-post-003.md (example post 3)
+- custom/ (custom collection posts in any-title.md format)
+  - post-001.md (custom post 1)
+  - post-002.md (custom post 2)
+  - post-003.md (custom post 3)
+- _includes/ (reusable template snippets)
+  - header.html (header with logo, nav, topbar)
+  - footer.html (footer with scripts/copyright)
+  - head.html (optional <head> partial: meta tags, CSS/JS links)
+  - layouts/ (templates controlling content rendering)
+    - base.html (base wrapper)
+    - home.html (homepage layout)
+    - post.html (layout for single blog post)
+    - list.html (layout for posts index)
+    - page.html (layout for static pages)
+- assets/ (custom assets: CSS/JS/images)
+  - css/
+    - style.css (main stylesheet)
+    - responsive.css (responsive/mobile styles)
+  - js/
+    - main.js (custom JavaScript)
+  - images/
+    - logo.png (site logo)
+- _data/ (Global data files. JSON, JS, or YAML)
+  - site.json (Example: site-wide metadata)

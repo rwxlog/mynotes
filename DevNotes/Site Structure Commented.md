@@ -80,7 +80,7 @@
   - partials/
     - header.html (header partial)
     - footer.html (footer partial)
-  - index.html (homepage)
+  - index.html (homepage layout)
 - static/ (public static assets)
   - css/
     - style.css (main stylesheet)

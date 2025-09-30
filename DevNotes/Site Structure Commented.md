@@ -131,7 +131,7 @@
 
 ---
 
-# Eleventy Structure
+## Eleventy Structure
 
 - .eleventy.js (Eleventy config file)
 - package.json (Project metadata & npm scripts)

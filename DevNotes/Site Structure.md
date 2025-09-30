@@ -122,7 +122,7 @@
 
 ---
 
-# Eleventy Project Structure
+## Eleventy Project Structure
 
 - .eleventy.js  
 - package.json

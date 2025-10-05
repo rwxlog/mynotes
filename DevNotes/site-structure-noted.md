@@ -1,4 +1,4 @@
-# Site Structure Commented
+# Site Structure Noted
 
 ## Static Structure
 - index.html (homepage)

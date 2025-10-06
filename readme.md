@@ -11,4 +11,4 @@ A repository where I keep my notes on different tech domains.
 - 🔗 [OtherNotes](https://github.com/rwxlog/mynotes/tree/main/OtherNotes)
 - 🔗 [TechNotes](https://github.com/rwxlog/mynotes/tree/main/TechNotes)
 
-**Link the pages to each folder on the repo to make a minimal website-like setup.**
+**Links given to each folder on the repo to make a minimal website-like setup.**

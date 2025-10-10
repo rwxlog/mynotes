@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Fully Automated Notes</title>
+  <title>My Automated Notes Repository</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Fully automated documentation site for nested notes using Docsify and the auto-sidebar plugin.">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
 </head>
@@ -11,21 +12,25 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
-      // General Configuration
-      name: 'My Fully Automated Notes',
-      repo: 'rwxlog/MyNotes', // << CHANGE THIS
-      auto2top: true,
-
-      // Core Sidebar Configuration
-      loadSidebar: true, // MUST be true to enable the sidebar
-      // Disable the native Auto-TOC generation, as the plugin handles nesting
-      subMaxLevel: 0, 
-
-      // Plugin Configuration (Required by some auto-sidebar versions)
-      // This tells Docsify to load the sidebar for every page
+      // 1. General Settings
+      name: 'MyNotes', 
+      repo: 'rwxlog/YourRepoName', // << IMPORTANT: Update this with your actual repository link
+      auto2top: true,                   // Scroll to the top when navigating to a new page
+      
+      // 2. Sidebar Configuration (The Auto-Magic)
+      loadSidebar: true, // Must be true to activate the sidebar
+      
+      // CRITICAL for nested folders: Ensures the sidebar is loaded correctly from the root 
+      // (where the auto-sidebar plugin generates it) for every page.
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md'
       },
+      
+      // Set subMaxLevel to 0 or 1 to prevent native Docsify TOC from conflicting
+      // with the auto-sidebar's main structure.
+      subMaxLevel: 1, 
+
+      // 3. Plugin Configurations
       
       // Search Plugin
       search: {
@@ -33,6 +38,13 @@
         placeholder: 'Search all notes...',
         noData: 'No results found.',
       },
+      
+      // Copy Code Plugin (Optional, but useful)
+      copyCode: {
+        buttonText: 'Copy to clipboard',
+        errorText: 'Error',
+        successText: 'Copied!'
+      }
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>

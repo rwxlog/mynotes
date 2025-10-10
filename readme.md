@@ -5,5 +5,3 @@
 * [LinuxNotes](mynotes/LinuxNotes)
 * [OtherNotes](mynotes/OtherNotes)
 * [TechNotes](mynotes/TechNotes)
-
-

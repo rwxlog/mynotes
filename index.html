@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Notes</title>
+  <title>My Fully Automated Notes</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="A quick viewer for MyNotes repository">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
 </head>
@@ -12,23 +11,34 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
-      // Configuration options:
-      name: 'My Notes', // Title in the sidebar
-      repo: 'rwxlog/MyNotes', // Link to your GitHub repository
-      loadSidebar: true, // Enable the sidebar
-      auto2top: true,    // Scroll to top on page navigation
-      // Plugins
+      // General Configuration
+      name: 'My Fully Automated Notes',
+      repo: 'rwxlog/MyNotes', // << CHANGE THIS
+      auto2top: true,
+
+      // Core Sidebar Configuration
+      loadSidebar: true, // MUST be true to enable the sidebar
+      // Disable the native Auto-TOC generation, as the plugin handles nesting
+      subMaxLevel: 0, 
+
+      // Plugin Configuration (Required by some auto-sidebar versions)
+      // This tells Docsify to load the sidebar for every page
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md'
+      },
+      
+      // Search Plugin
       search: {
-        maxAge: 86400000, // Expiration time in ms (1 day)
-        placeholder: 'Search notes',
-        noData: 'No results found',
-        // Paths to exclude if needed:
-        // paths: 'auto',
-        // depth: 2,
+        maxAge: 86400000, 
+        placeholder: 'Search all notes...',
+        noData: 'No results found.',
       },
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  
+  <script src="//cdn.jsdelivr.net/npm/docsify-auto-sidebar"></script>
+  
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
 </body>

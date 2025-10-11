@@ -4,56 +4,124 @@
   <meta charset="UTF-8">
   <title>My Notes</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Fully automated documentation site for nested notes using Docsify and the auto-sidebar plugin.">
+  <meta name="description" content="A structured digital notebook for Linux, WordPress, and Cybersecurity — powered by Docsify.">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+
+  <!-- 🌗 Dark/Light Theme -->
+  <link
+    rel="stylesheet"
+    href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@3/dist/docsify-themeable/style.min.css"
+    title="docsify-darklight-theme"
+    disabled
+  >
+  <link
+    rel="stylesheet"
+    href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@3/dist/docsify-themeable/dark.min.css"
+    title="docsify-darklight-theme"
+  >
+
+  <!-- 🧩 Optional: Minimal Custom Styling -->
+  <style>
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+    }
+    .app-name {
+      font-weight: 600;
+      font-size: 1.4em;
+    }
+    .markdown-section code {
+      background: rgba(0,0,0,0.05);
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+    }
+    .sidebar ul li a {
+      border-radius: 6px;
+      padding: 4px 10px;
+      transition: background 0.2s ease;
+    }
+    .sidebar ul li a:hover {
+      background: rgba(125,125,125,0.15);
+    }
+  </style>
 </head>
 <body>
   <div id="app"></div>
+
   <script>
     window.$docsify = {
-      // 1. General Settings
-      name: 'MyNotes', 
-      repo: 'rwxlog/mynotes', // << IMPORTANT: Update this with your actual repository link
-      auto2top: true,                   // Scroll to the top when navigating to a new page
-      
-      // 2. Sidebar Configuration (The Auto-Magic)
-      loadSidebar: true, // Must be true to activate the sidebar
-      loadNavbar: true,   // Optional: Enables navbar from _navbar.md
-      coverpage: true     // Optional: Shows a cover
-        
-      // CRITICAL for nested folders: Ensures the sidebar is loaded correctly from the root 
-      // (where the auto-sidebar plugin generates it) for every page.
+      /* ---------------------------------
+         1. Basic Site Settings
+      --------------------------------- */
+      name: 'MyNotes',
+      repo: 'rwxlog/mynotes', // ✅ your repo link
+      auto2top: true,
+      loadSidebar: true,
+      loadNavbar: true,   // ✅ enable navbar
+      coverpage: true,    // ✅ enable coverpage
+
+      /* ---------------------------------
+         2. Sidebar & Navigation
+      --------------------------------- */
+      subMaxLevel: 1,     // Limit internal headings in sidebar
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md'
       },
-      
-      // Set subMaxLevel to 0 or 1 to prevent native Docsify TOC from conflicting
-      // with the auto-sidebar's main structure.
-      subMaxLevel: 1, 
-
-      // 3. Plugin Configurations
-      
-      // Search Plugin
-      search: {
-        maxAge: 86400000, 
-        placeholder: 'Search all notes...',
-        noData: 'No results found.',
+      autoSidebar: {
+        collapse: true,
+        titleMode: 'folder',
+        depth: 3
       },
-      
-      // Copy Code Plugin (Optional, but useful)
+
+      /* ---------------------------------
+         3. Plugin Settings
+      --------------------------------- */
+      search: {
+        maxAge: 86400000,
+        placeholder: 'Search notes...',
+        noData: 'No results found.'
+      },
       copyCode: {
-        buttonText: 'Copy to clipboard',
+        buttonText: 'Copy',
         errorText: 'Error',
         successText: 'Copied!'
+      },
+
+      /* ---------------------------------
+         4. Dark/Light Theme
+      --------------------------------- */
+      darklightTheme: {
+        defaultTheme: 'dark', // can be 'light'
+        dark: {
+          background: '#121212',
+          textColor: '#ddd',
+          toggleBtnBg: '#333'
+        },
+        light: {
+          background: '#ffffff',
+          textColor: '#333',
+          toggleBtnBg: '#ddd'
+        }
       }
     }
   </script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-  
-  <script src="//cdn.jsdelivr.net/npm/docsify-auto-sidebar"></script>
-  
+
+  <!-- 🧠 Core Docsify -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+
+  <!-- 📂 Auto Sidebar Plugin -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-auto-sidebar@1.1.1/dist/docsify-auto-sidebar.min.js"></script>
+
+  <!-- 🔍 Search Plugin -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+
+  <!-- 📋 Copy Code Plugin -->
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+
+  <!-- 📁 Collapsible Sidebar Plugin -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+
+  <!-- 🌗 Dark/Light Theme Script -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@3/dist/docsify-darklight-theme.min.js"></script>
 </body>
 </html>

@@ -3,9 +3,9 @@
 # **MyNotes**
 > A structured digital notebook for Linux, WordPress, and Cybersecurity.
 
-- 🧠 Focused on Learning
-- 💻 Powered by Docsify
-- ⚙️ Organized Automatically
+- 🧠 Focused on Learning  
+- 💻 Built with Docsify  
+- ⚙️ Organized Automatically  
 
 [Get Started](README.md)
 [GitHub](https://github.com/rwxlog/mynotes)

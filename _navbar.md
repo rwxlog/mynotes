@@ -1,0 +1,5 @@
+* [Home](/#/)
+* [Linux](#/linux/intro)
+* [WordPress](#/wordpress/themes)
+* [Cybersecurity](#/cybersecurity/basics)
+* [GitHub](https://github.com/rwxlog/mynotes)

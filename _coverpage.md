@@ -1,11 +1,8 @@
-![logo](https://cdn.jsdelivr.net/gh/docsifyjs/docsify/docs/_media/icon.svg)
+# 🗒️ My Notes
 
-# **MyNotes**
-> A structured digital notebook for Linux, WordPress, and Cybersecurity.
+> A structured personal knowledge base for Linux, WordPress, Cybersecurity, and beyond.
 
-- 🧠 Focused on Learning  
-- 💻 Built with Docsify  
-- ⚙️ Organized Automatically  
+[View Notes](README.md)
+[GitHub Repo](https://github.com/rwxlog/mynotes)
 
-[Get Started](README.md)
-[GitHub](https://github.com/rwxlog/mynotes)
+![background](https://picsum.photos/seed/docsify-cover/1600/900)

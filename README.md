@@ -72,3 +72,7 @@ Welcome to my organized collection of notes covering Cybersecurity, WordPress, D
 - [Sample Note](docs/OtherNotes/samplenote.md)
 
 </details>
+
+---
+
+🌟 **Visit the GitHub Pages site:** [https://rwxlog.github.io/mynotes/](https://rwxlog.github.io/mynotes/)

@@ -39,5 +39,4 @@
 
 ---
 
-### 🌟 Visit the GitHub Pages Site  
-👉 [**rwxlog.github.io/mynotes**](https://rwxlog.github.io/mynotes/)
+### 🌟 Visit the GitHub Repo  👉 [**rwxlog.github.io/mynotes**](https://github.com/rwxlog/mynotes/)

@@ -1,31 +1,30 @@
-name: Deploy Docs
+name: Deploy MkDocs site to GitHub Pages
 
 on:
   push:
-    branches: [main]  # Or 'master' if that's your default branch
-  workflow_dispatch:  # Allows manual triggering from the Actions tab
+    branches:
+      - main  # or master if your default branch is named that
 
 permissions:
-  contents: read
-  pages: write      # Required for GitHub Pages deployment
-  id-token: write   # Required for authenticated GitHub API calls
+  contents: write  # required for GitHub Pages deployment
 
 jobs:
-  deploy:
+  build-deploy:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0  # Shallow clones can cause issues with ghp-import
 
-      - name: Set up Python
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'  # Or a specific version like '3.11'
+          python-version: '3.x'
 
-      - name: Install MkDocs
-        run: pip install mkdocs
+      - name: Install dependencies
+        run: |
+          pip install mkdocs-material
 
-      - name: Deploy to GitHub Pages
-        run: mkdocs gh-deploy --force --clean --verbose
+      - name: Build and deploy
+        run: |
+          mkdocs gh-deploy --force

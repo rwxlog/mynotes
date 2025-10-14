@@ -52,7 +52,6 @@ nav:
       - Sample Note: HunterNotes/samplenote.md
   - Linux Notes:
       - paclist: LinuxNotes/paclist.md
-      - Sample Note: LinuxNotes/samplenote.md
   - Tech Notes:
       - GitHub: TechNotes/GitHub.md
   - Web Notes:

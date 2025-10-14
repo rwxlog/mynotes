@@ -20,6 +20,18 @@ theme:
         icon: material/weather-night
         name: Switch to dark mode
 
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences # REQUIRED for correct rendering of fenced code blocks
+  - pymdownx.details
+  - attr_list
+
 nav:
   - Home: index.md
   - Career Notes:

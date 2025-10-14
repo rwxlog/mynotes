@@ -1,7 +1,3 @@
-# 🗂 Notes Repository
-
-[![Visit Site](https://img.shields.io/badge/GitHub%20Pages-Visit-blue?style=for-the-badge&logo=github)](https://rwxlog.github.io/mynotes/)
-
 Welcome to my organized collection of notes on **Cybersecurity**, **WordPress**, **Linux**, **Development**, and **Technology**.  
 Each section below links directly to topic-specific notes.
 

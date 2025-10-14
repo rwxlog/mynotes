@@ -1,8 +1,3 @@
-Welcome to my organized collection of notes on **Cybersecurity**, **WordPress**, **Linux**, **Development**, and **Technology**.  
-Each section below contains topic-specific notes neatly categorized for quick reference.
-
----
-
 ## 📑 Table of Contents
 
 ??? info "💼 Career Notes"

@@ -1,0 +1,30 @@
+name: Deploy MkDocs site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # or master if your default branch is named that
+
+permissions:
+  contents: write  # required for GitHub Pages deployment
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          pip install mkdocs-material
+
+      - name: Build and deploy
+        run: |
+          mkdocs gh-deploy --force

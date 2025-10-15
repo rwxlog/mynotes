@@ -72,6 +72,29 @@ Each section below contains topic-specific notes neatly categorized for quick re
 </details>
 
 <details>
+<summary>📦 <strong>SSG Notes</strong></summary>
+
+- 🚀 [Astro](docs/SSGNotes/astro.md)
+- 📘 [Docsify](docs/SSGNotes/astro.md)
+- 🦕 [Docusaurus](docs/SSGNotes/astro.md)
+- 🏗 [Eleventy (11ty)](docs/SSGNotes/astro.md)
+- ⚛️ [Gatsby](docs/SSGNotes/astro.md)
+- 🌲 [Gridsome](docs/SSGNotes/astro.md)
+- 🐉 [Hexo](docs/SSGNotes/astro.md)
+- ⚡ [Hugo](docs/SSGNotes/astro.md)
+- 💎 [Jekyll](docs/SSGNotes/astro.md)
+- 📖 [Lektor](docs/SSGNotes/astro.md)
+- 🧭 [MkDocs](docs/SSGNotes/astro.md)
+- 🚢 [MkDocs (GitHub Deploy)](docs/SSGNotes/astro.md)
+- 🧭 [Next.js](docs/SSGNotes/astro.md)
+- 🌌 [Nuxt.js](docs/SSGNotes/astro.md)
+- 🪶 [Pelican](docs/SSGNotes/astro.md)
+- ⚙️ [Vite](docs/SSGNotes/astro.md)
+- 📗 [VuePress](docs/SSGNotes/astro.md)
+
+</details>
+
+<details>
 <summary>📦 <strong>Other Notes</strong></summary>
 
 - 📄 [Sample Note](docs/OtherNotes/samplenote.md)

@@ -34,6 +34,25 @@
     - 🗂 [Site Structure (Noted)](WebNotes/site-structure-noted.md)  
     - 🏗 [Site Structure](WebNotes/site-structure.md)
 
+??? success "🔍 SSG Notes"
+    - 🚀 [Astro](SSGNotes/astro.md)
+    - 📘 [Docsify](SSGNotes/astro.md)
+    - 🦕 [Docusaurus](SSGNotes/astro.md)
+    - 🏗 [Eleventy (11ty)](SSGNotes/astro.md)
+    - ⚛️ [Gatsby](SSGNotes/astro.md)
+    - 🌲 [Gridsome](SSGNotes/astro.md)
+    - 🐉 [Hexo](SSGNotes/astro.md)
+    - ⚡ [Hugo](SSGNotes/astro.md)
+    - 💎 [Jekyll](SSGNotes/astro.md)
+    - 📖 [Lektor](SSGNotes/astro.md)
+    - 🧭 [MkDocs](SSGNotes/astro.md)
+    - 🚢 [MkDocs (GitHub Deploy)](SSGNotes/astro.md)
+    - 🧭 [Next.js](SSGNotes/astro.md)
+    - 🌌 [Nuxt.js](SSGNotes/astro.md)
+    - 🪶 [Pelican](SSGNotes/astro.md)
+    - ⚙️ [Vite](SSGNotes/astro.md)
+    - 📗 [VuePress](SSGNotes/astro.md)
+
 ??? note "📦 Other Notes"
     - 📄 [Sample Note](OtherNotes/samplenote.md)
 

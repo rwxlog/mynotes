@@ -62,21 +62,21 @@ nav:
       - Site Structure: WebNotes/site-structure.md
   - SSG Notes:
     - Astro: SSGNotes/astro.md
-    - Docsify: SSGNotes/astro.md
-    - Docusaurus: SSGNotes/astro.md
-    - Eleventy (11ty): SSGNotes/astro.md
-    - Gatsby: SSGNotes/astro.md
-    - Gridsome: SSGNotes/astro.md
-    - Hexo: SSGNotes/astro.md
-    - Hugo: SSGNotes/astro.md
-    - Jekyll: SSGNotes/astro.md
-    - Lektor: SSGNotes/astro.md
-    - MkDocs: SSGNotes/astro.md
-    - MkDocs (GitHub Deploy): SSGNotes/astro.md
-    - Next.js: SSGNotes/astro.md
-    - Nuxt.js: SSGNotes/astro.md
-    - Pelican: SSGNotes/astro.md
-    - Vite: SSGNotes/astro.md
-    - VuePress: SSGNotes/astro.md
+    - Docsify: SSGNotes/docsify.md
+    - Docusaurus: SSGNotes/docusaurus.md
+    - Eleventy (11ty): SSGNotes/eleventy.md
+    - Gatsby: SSGNotes/gatsby.md
+    - Gridsome: SSGNotes/gridsome.md
+    - Hexo: SSGNotes/hexo.md
+    - Hugo: SSGNotes/hugo.md
+    - Jekyll: SSGNotes/jekyll.md
+    - Lektor: SSGNotes/lektor.md
+    - MkDocs: SSGNotes/mkdocs.md
+    - MkDocs (GitHub Deploy): SSGNotes/mkdocs-gh.md
+    - Next.js: SSGNotes/next-js.md
+    - Nuxt.js: SSGNotes/nuxt-js.md
+    - Pelican: SSGNotes/pelican.md
+    - Vite: SSGNotes/vite.md
+    - VuePress: SSGNotes/vuepress.md
   - Other Notes:
       - Sample Note: OtherNotes/samplenote.md

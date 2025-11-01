@@ -64,6 +64,7 @@ Each section below contains topic-specific notes neatly categorized for quick re
 
 - 🔗 [Markdown Links](docs/WebNotes/markdown-links.md)
 - 🖋 [Markdown Styling](docs/WebNotes/markdown-styling.md)
+- 🧮 [Programing Concepts](WebNotes/programing-concepts.md)
 - 🔄 [Share Button](docs/WebNotes/share-button.md)
 - 🗂 [Site Structure (Noted)](docs/WebNotes/site-structure-noted.md)
 - 🏗 [Site Structure](docs/WebNotes/site-structure.md)

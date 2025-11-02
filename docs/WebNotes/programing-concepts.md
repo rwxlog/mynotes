@@ -1,88 +1,144 @@
-Fundamental Programming Concepts: The Core Toolkit 🛠️
+## Fundamental Programming Concepts: The Core Toolkit 🛠️
 
-1. Variables and Data Types
+### 1\. Variables and Data Types
+
 These concepts handle how information is stored and categorized within a program.
- * Variables 🧩: These are named containers that store values. Their contents can change as the program runs.
-   Example: Assigning values to variables.
-   age = 25              # Variable 'age' holds an integer
-user_name = "Charlie" # Variable 'user_name' holds a string
 
- * Data Types 🔢: Classifications that tell the computer what kind of data a variable holds (e.g., number, text, or true/false). Type Casting is converting a value from one type to another.
-   Example: Different basic data types and type casting.
-   # Basic Types
-integer_val = 10      # int
-float_val = 3.14      # float
-is_logged_in = True   # bool
+  * **Variables** 🧩: These are named containers that store values. Their contents can change as the program runs.
 
-# Type Casting
-new_int = int("500")  # Converts string "500" to integer 500
+    **Example:** Assigning values to variables.
 
-2. Control Flow
+    ```python
+    age = 25              # Variable 'age' holds an integer
+    user_name = "Charlie" # Variable 'user_name' holds a string
+    ```
+
+  * **Data Types** 🔢: Classifications that tell the computer what kind of data a variable holds (e.g., number, text, or true/false). **Type Casting** is converting a value from one type to another.
+
+    **Example:** Different basic data types and type casting.
+
+    ```python
+    # Basic Types
+    integer_val = 10      # int
+    float_val = 3.14      # float
+    is_logged_in = True   # bool
+
+    # Type Casting
+    new_int = int("500")  # Converts string "500" to integer 500
+    ```
+
+-----
+
+### 2\. Control Flow
+
 Control flow structures dictate the order in which code instructions are executed, enabling decisions and repetition.
- * Conditionals ⚖️: Statements (if, elif, else) that allow your program to make decisions. A block of code runs only if a specified condition evaluates to True.
-   Example: The if/else structure.
-   score = 88
-if score >= 90:
-    print("Excellent!")
-elif score >= 80:
-    print("Good Job.")
-else:
-    print("Keep practicing.")
 
- * Loops 🔁: Structures used to repeatedly execute a block of code. A For Loop repeats for a set number of items, while a While Loop repeats as long as a condition is met.
-   Example: Repeating an action using loops.
-   # For Loop: Iterating over a range
-for i in range(3):
-    print(i) # Output: 0, 1, 2
+  * **Conditionals** ⚖️: Statements (`if`, `elif`, `else`) that allow your program to make decisions. A block of code runs only if a specified condition evaluates to **True**.
 
-# While Loop: Repeating while a condition is True
-x = 0
-while x < 2:
-    x += 1
+    **Example:** The `if`/`else` structure.
 
-3. Reusability and Organization
+    ```python
+    score = 88
+    if score >= 90:
+        print("Excellent!")
+    elif score >= 80:
+        print("Good Job.")
+    else:
+        print("Keep practicing.")
+    ```
+
+  * **Loops** 🔁: Structures used to repeatedly execute a block of code. A **For Loop** repeats for a set number of items, while a **While Loop** repeats as long as a condition is met.
+
+    **Example:** Repeating an action using loops.
+
+    ```python
+    # For Loop: Iterating over a range
+    for i in range(3):
+        print(i) # Output: 0, 1, 2
+
+    # While Loop: Repeating while a condition is True
+    x = 0
+    while x < 2:
+        x += 1
+    ```
+
+-----
+
+### 3\. Reusability and Organization
+
 These concepts allow developers to segment code into manageable, reusable chunks.
- * Functions ⚙️: Independent, named blocks of code designed to perform one specific task. They often take inputs (arguments) and can return an output.
-   Example: Defining and calling a function.
-   def calculate_area(length, width):
-    return length * width
 
-result = calculate_area(10, 5) # result is 50
+  * **Functions** ⚙️: Independent, named blocks of code designed to perform one specific task. They often take inputs (**arguments**) and can return an output.
 
- * Methods 🧰: Functions that are attached directly to an object or a data type (like a string, list, or custom class) and perform an action relevant to that object.
-   Example: Using a built-in string method.
-   phrase = "hello world"
-capitalized = phrase.capitalize() # Returns "Hello world"
+    **Example:** Defining and calling a function.
 
-4. Data Structures
+    ```python
+    def calculate_area(length, width):
+        return length * width
+
+    result = calculate_area(10, 5) # result is 50
+    ```
+
+  * **Methods** 🧰: Functions that are attached directly to an **object** or a data type (like a string, list, or custom class) and perform an action relevant to that object.
+
+    **Example:** Using a built-in string method.
+
+    ```python
+    phrase = "hello world"
+    capitalized = phrase.capitalize() # Returns "Hello world"
+    ```
+
+-----
+
+### 4\. Data Structures
+
 These are efficient formats for organizing and storing collections of related data.
- * Strings 📚: An ordered sequence of characters used to represent text. You can access individual characters by their position (index).
-   Example: Accessing and manipulating strings.
-   email = "test@example.com"
-domain = email.split('@')[1] # Returns "example.com"
 
- * Lists/Arrays 🧱: An ordered, indexed collection of items. In Python, a List is dynamic and mutable. An Array is often used in other languages for a fixed-size collection of the same type.
-   Example: Creating and modifying a list.
-   tasks = ["buy milk", "clean", "code"]
-tasks.append("sleep")   # Adds an item
-print(tasks[0])         # Output: "buy milk"
+  * **Strings** 📚: An ordered sequence of characters used to represent text. You can access individual characters by their position (index).
 
- * Dictionaries/Maps 🗂️: Collections of data stored as key-value pairs. They are used for fast lookups using the unique, descriptive key instead of a numerical index.
-   Example: Defining and accessing a dictionary.
-   student = {
-    "id": 101,
-    "major": "CS",
-    "gpa": 3.8
-}
-print(student["major"]) # Output: "CS"
+    **Example:** Accessing and manipulating strings.
 
-5. Object-Oriented Concepts
- * Classes and Objects 📦: The basis of Object-Oriented Programming (OOP). A Class is a blueprint for creating things. An Object is a specific instance (a concrete item) created from that blueprint.
-   Example: Defining a simple class and creating an object.
-   class Pet:
-    def __init__(self, name):
-        self.name = name
+    ```python
+    email = "test@example.com"
+    domain = email.split('@')[1] # Returns "example.com"
+    ```
 
-dog = Pet("Buddy")      # 'dog' is an object of the Pet class
-print(dog.name)         # Output: "Buddy"
+  * **Lists/Arrays** 🧱: An **ordered, indexed collection** of items. In Python, a **List** is dynamic and **mutable**. An **Array** is often used in other languages for a fixed-size collection of the same type.
 
+    **Example:** Creating and modifying a list.
+
+    ```python
+    tasks = ["buy milk", "clean", "code"]
+    tasks.append("sleep")   # Adds an item
+    print(tasks[0])         # Output: "buy milk"
+    ```
+
+  * **Dictionaries/Maps** 🗂️: Collections of data stored as **key-value pairs**. They are used for fast lookups using the unique, descriptive key instead of a numerical index.
+
+    **Example:** Defining and accessing a dictionary.
+
+    ```python
+    student = {
+        "id": 101,
+        "major": "CS",
+        "gpa": 3.8
+    }
+    print(student["major"]) # Output: "CS"
+    ```
+
+-----
+
+### 5\. Object-Oriented Concepts
+
+  * **Classes and Objects** 📦: The basis of Object-Oriented Programming (OOP). A **Class** is a blueprint for creating things. An **Object** is a specific instance (a concrete item) created from that blueprint.
+
+    **Example:** Defining a simple class and creating an object.
+
+    ```python
+    class Pet:
+        def __init__(self, name):
+            self.name = name
+
+    dog = Pet("Buddy")      # 'dog' is an object of the Pet class
+    print(dog.name)         # Output: "Buddy"
+    ```

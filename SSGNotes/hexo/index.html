@@ -1,0 +1,2304 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://rwxlog.github.io/mynotes/SSGNotes/hexo/">
+      
+      
+        <link rel="prev" href="../gridsome/">
+      
+      
+        <link rel="next" href="../hugo/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>Hexo - My Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-local-hexo-setup-and-project-initialization" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="My Notes" class="md-header__button md-logo" aria-label="My Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Hexo
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="pink"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Notes" class="md-nav__button md-logo" aria-label="My Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Career Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Career Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CareerNotes/90-day-cybersecurity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    90 Day Cybersecurity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CareerNotes/90-day-wordpress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    90 Day WordPress
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Cyber Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Cyber Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CyberNotes/samplenote/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sample Note
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Dev Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Dev Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DevNotes/LAMP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LAMP Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DevNotes/phpMyAdmin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    phpMyAdmin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DevNotes/wp-backup-auto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WP Backup (Auto)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DevNotes/wp-backup-compressed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WP Backup (Compressed)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DevNotes/wp-backup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WP Backup (Manual)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DevNotes/wp-database-cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WP Database CLI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DevNotes/wp-database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WP Database GUI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DevNotes/wp-restore/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WP Restore
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Hunter Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Hunter Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HunterNotes/samplenote/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sample Note
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Linux Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Linux Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LinuxNotes/paclist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    paclist
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tech Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Tech Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TechNotes/GitHub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GitHub
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Web Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Web Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WebNotes/markdown-links/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Markdown Links
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WebNotes/markdown-styling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Markdown Styling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WebNotes/programing-concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programing Concepts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WebNotes/programing-basics.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programing Basics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WebNotes/share-button/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Share Button
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WebNotes/site-structure-noted/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Site Structure (Noted)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WebNotes/site-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Site Structure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    SSG Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            SSG Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../astro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Astro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docsify/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docsify
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docusaurus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docusaurus
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eleventy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Eleventy (11ty)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gatsby/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gatsby
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gridsome/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gridsome
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Hexo
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hexo
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-local-hexo-setup-and-project-initialization" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Local Hexo Setup and Project Initialization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Local Hexo Setup and Project Initialization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-install-prerequisites-and-hexo-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Install Prerequisites and Hexo CLI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-create-a-new-hexo-site" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Create a New Hexo Site
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-local-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3. Local Test
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-custom-layouts-partials-and-static-assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Custom Layouts, Partials, and Static Assets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Custom Layouts, Partials, and Static Assets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-project-filefolder-structure-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. Project File/Folder Structure Tree
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-identify-the-theme-and-layouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. Identify the Theme and Layouts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-customize-layout-and-partials" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3. Customize Layout and Partials
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-manage-static-assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4. Manage Static Assets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-final-local-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5. Final Local Check
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-github-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. GitHub Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. GitHub Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-verify-gitignore" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Verify .gitignore
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-commit-and-push-to-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Commit and Push to GitHub
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-netlify-setup-for-continuous-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Netlify Setup for Continuous Deployment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Netlify Setup for Continuous Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-sign-up-and-import-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Sign Up and Import Project
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-configure-build-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Configure Build Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-deploy-the-site" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3. Deploy the Site
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-ongoing-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Ongoing Workflow
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hugo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hugo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jekyll/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Jekyll
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lektor.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lektor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mkdocs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MkDocs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mkdocs-gh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MkDocs (GitHub Deploy)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../next-js/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Next.js
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nuxt-js/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nuxt.js
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pelican/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pelican
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vite
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vuepress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VuePress
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Other Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Other Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OtherNotes/samplenote/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sample Note
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-local-hexo-setup-and-project-initialization" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Local Hexo Setup and Project Initialization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Local Hexo Setup and Project Initialization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-install-prerequisites-and-hexo-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Install Prerequisites and Hexo CLI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-create-a-new-hexo-site" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Create a New Hexo Site
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-local-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3. Local Test
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-custom-layouts-partials-and-static-assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Custom Layouts, Partials, and Static Assets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Custom Layouts, Partials, and Static Assets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-project-filefolder-structure-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. Project File/Folder Structure Tree
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-identify-the-theme-and-layouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. Identify the Theme and Layouts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-customize-layout-and-partials" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3. Customize Layout and Partials
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-manage-static-assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4. Manage Static Assets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-final-local-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5. Final Local Check
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-github-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. GitHub Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. GitHub Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-verify-gitignore" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Verify .gitignore
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-commit-and-push-to-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Commit and Push to GitHub
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-netlify-setup-for-continuous-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Netlify Setup for Continuous Deployment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Netlify Setup for Continuous Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-sign-up-and-import-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Sign Up and Import Project
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-configure-build-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Configure Build Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-deploy-the-site" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3. Deploy the Site
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-ongoing-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Ongoing Workflow
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Hexo</h1>
+
+<p>Setting up a <strong>Hexo</strong> site with Netlify provides a fast, Node.js-based publishing workflow. This guide covers the full process, from local Hexo setup and customization to automated deployment via Git and Netlify.</p>
+<hr />
+<h2 id="1-local-hexo-setup-and-project-initialization">1. Local Hexo Setup and Project Initialization</h2>
+<p>Hexo is a Node.js-based framework. You'll need <strong>Node.js</strong> and npm (or yarn/pnpm).</p>
+<h3 id="11-install-prerequisites-and-hexo-cli">1.1. Install Prerequisites and Hexo CLI</h3>
+<ol>
+<li><strong>Install Node.js</strong> (LTS version recommended).</li>
+<li><strong>Install the Hexo CLI globally:</strong>
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>hexo-cli
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># OR: yarn global add hexo-cli</span>
+</span></code></pre></div></li>
+</ol>
+<h3 id="12-create-a-new-hexo-site">1.2. Create a New Hexo Site</h3>
+<p>The CLI will scaffold a new project with all necessary files.</p>
+<ol>
+<li><strong>Create the site:</strong>
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>hexo<span class="w"> </span>init<span class="w"> </span>my-hexo-site
+</span></code></pre></div></li>
+<li><strong>Navigate into the directory and install dependencies:</strong>
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">cd</span><span class="w"> </span>my-hexo-site
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>npm<span class="w"> </span>install
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># OR: yarn install</span>
+</span></code></pre></div></li>
+</ol>
+<h3 id="13-local-test">1.3. Local Test</h3>
+<p>Run the development server to verify the default site.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>hexo<span class="w"> </span>server
+</span></code></pre></div>
+<p>Your site will be running at <code>http://localhost:4000/</code>. Press <strong>Ctrl+C</strong> to stop the server.</p>
+<hr />
+<h2 id="2-custom-layouts-partials-and-static-assets">2. Custom Layouts, Partials, and Static Assets</h2>
+<p>Hexo uses the <strong>EJS</strong> or <strong>Swig</strong> templating engine (depending on the theme) and organizes templates within the <strong><code>themes/</code></strong> folder. The default theme is usually called <code>landscape</code>.</p>
+<h3 id="21-project-filefolder-structure-tree">2.1. Project File/Folder Structure Tree</h3>
+<p>Your project structure, after customization, will look like this:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>my-hexo-site/
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>├── node_modules/            # Node.js dependencies
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>├── public/                  # ⚠️ Generated static site (Publish Directory for Netlify)
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>├── source/                  # Source content files (Markdown, Pages)
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>│   ├── _posts/
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>│   │   └── hello-world.md   # Example blog post
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>│   └── about/
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>│       └── index.md         # Content for an &#39;/about&#39; page
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>├── scaffolds/               # Boilerplate files for new posts/pages
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>├── themes/                  # All installed themes
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>│   └── landscape/           # The active theme directory (or your custom theme)
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>│       ├── _config.yml      # Theme-specific configuration
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>│       ├── layout/          # Templates for page types (Jinja2/EJS/Swig)
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>│       │   ├── _partial/    # Reusable snippets (Partials)
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>│       │   │   ├── footer.ejs
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>│       │   │   └── header.ejs
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>│       │   ├── layout.ejs   # The main HTML skeleton (Layout)
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>│       │   └── post.ejs     # Template for individual posts
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>│       └── source/          # Static theme assets (CSS, JS, images)
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>│           └── css/
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>│               └── style.css # Custom CSS file
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>├── _config.yml              # Main site configuration (URL, theme name, title)
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>├── package.json             # Node.js dependencies and run scripts
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>└── package-lock.json
+</span></code></pre></div>
+<h3 id="22-identify-the-theme-and-layouts">2.2. Identify the Theme and Layouts</h3>
+<ol>
+<li><strong>Check the active theme:</strong> Open <strong><code>_config.yml</code></strong> (at the root) and note the <code>theme:</code> setting (e.g., <code>theme: landscape</code>).</li>
+<li><strong>Locate the Layout:</strong> The main wrapper is usually located in <strong><code>themes/&lt;theme_name&gt;/layout/layout.ejs</code></strong> (or <code>.swig</code>, <code>.pug</code>, etc.).</li>
+</ol>
+<h3 id="23-customize-layout-and-partials">2.3. Customize Layout and Partials</h3>
+<p>You should <strong>never edit files directly in <code>themes/&lt;theme_name&gt;</code></strong> as they will be overwritten during updates. Instead, <strong>override</strong> them by copying the file structure into the project root. However, for simplicity here, we'll demonstrate using the default theme structure.</p>
+<ol>
+<li><strong>Find the main template:</strong> Open <strong><code>themes/landscape/layout/layout.ejs</code></strong>. This file defines the global structure, including <code>&lt;head&gt;</code>, and usually includes <strong>Partials</strong> like <code>header.ejs</code> and <code>footer.ejs</code>.</li>
+<li><strong>Customize the Header Partial:</strong><ul>
+<li>File: <strong><code>themes/landscape/layout/_partial/header.ejs</code></strong></li>
+<li>Add custom navigation links (e.g., to an "About" page, which is created via <code>hexo new page about</code>):
+<!-- end list -->
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>&lt;nav&gt;
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    &lt;a href=&quot;&lt;%- url_for(&#39;/&#39;) %&gt;&quot;&gt;Home&lt;/a&gt;
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    &lt;a href=&quot;&lt;%- url_for(&#39;/about&#39;) %&gt;&quot;&gt;About&lt;/a&gt;
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>&lt;/nav&gt;
+</span></code></pre></div></li>
+</ul>
+</li>
+</ol>
+<h3 id="24-manage-static-assets">2.4. Manage Static Assets</h3>
+<p>Assets placed directly in the <strong><code>themes/&lt;theme_name&gt;/source/</code></strong> directory are copied to the final output.</p>
+<ol>
+<li><strong>Locate the CSS directory:</strong> Usually <strong><code>themes/landscape/source/css/</code></strong>.</li>
+<li><strong>Add Custom Styles:</strong> Add your custom CSS to the theme's CSS files (or create a new one and link it in the <code>layout.ejs</code> file).<ul>
+<li>File: <strong><code>themes/landscape/source/css/style.css</code></strong> (or similar file in your theme).</li>
+</ul>
+</li>
+</ol>
+<h3 id="25-final-local-check">2.5. Final Local Check</h3>
+<ol>
+<li><strong>Clean and build the site:</strong>
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>hexo<span class="w"> </span>clean
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>hexo<span class="w"> </span>generate
+</span></code></pre></div>
+    <em>This creates the static HTML files in the </em><em><code>public/</code></em><em> directory.</em></li>
+<li><strong>Serve the static output:</strong>
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>hexo<span class="w"> </span>server
+</span></code></pre></div></li>
+</ol>
+<hr />
+<h2 id="3-github-setup">3. GitHub Setup</h2>
+<h3 id="31-verify-gitignore">3.1. Verify <code>.gitignore</code></h3>
+<p>The starter includes a <code>.gitignore</code> that correctly ignores the built site. Ensure it contains:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a># Hexo generated files
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>.DS_Store
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>Thumbs.db
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>db.json
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>*.log
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a># Build output
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>/public/
+</span></code></pre></div>
+<h3 id="32-commit-and-push-to-github">3.2. Commit and Push to GitHub</h3>
+<ol>
+<li><strong>Add all files and commit:</strong>
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Initial Hexo site with custom navigation&quot;</span>
+</span></code></pre></div></li>
+<li><strong>Create a new repository on GitHub</strong> (e.g., named <code>my-hexo-netlify</code>).</li>
+<li><strong>Link your local repo and push:</strong> (Replace placeholders)
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>https://github.com/&lt;your_username&gt;/&lt;repo_name&gt;.git
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>git<span class="w"> </span>branch<span class="w"> </span>-M<span class="w"> </span>main
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
+</span></code></pre></div></li>
+</ol>
+<hr />
+<h2 id="4-netlify-setup-for-continuous-deployment">4. Netlify Setup for Continuous Deployment</h2>
+<h3 id="41-sign-up-and-import-project">4.1. Sign Up and Import Project</h3>
+<ol>
+<li>Go to the <strong>Netlify website</strong> and log in.</li>
+<li>In the Netlify dashboard, click <strong>"Add new site"</strong> then <strong>"Import an existing project"</strong>.</li>
+<li>Select <strong>"GitHub"</strong> and choose your repository (<code>my-hexo-netlify</code>).</li>
+</ol>
+<h3 id="42-configure-build-settings">4.2. Configure Build Settings</h3>
+<p>Netlify often auto-detects Node.js projects but requires explicit configuration for Hexo's build command and output directory.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Setting</th>
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Branch to deploy</strong></td>
+<td style="text-align: left;"><code>main</code></td>
+<td style="text-align: left;">The branch Netlify monitors.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Build command</strong></td>
+<td style="text-align: left;"><strong><code>hexo generate</code></strong></td>
+<td style="text-align: left;">The command to generate the static site.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Publish directory</strong></td>
+<td style="text-align: left;"><strong><code>public</code></strong></td>
+<td style="text-align: left;">The folder Hexo outputs the static files to.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-deploy-the-site">4.3. Deploy the Site</h3>
+<p>Click the <strong>"Deploy site"</strong> button. Netlify will:</p>
+<ol>
+<li>Fetch your GitHub code.</li>
+<li>Install Node.js dependencies.</li>
+<li>Run the build command (<code>hexo generate</code>).</li>
+<li>Publish the contents of the <strong><code>public</code></strong> directory.</li>
+</ol>
+<p>Your Hexo site will be live on a temporary Netlify URL.</p>
+<hr />
+<h2 id="5-ongoing-workflow">5. Ongoing Workflow</h2>
+<p>The Continuous Deployment (CD) pipeline is now established:</p>
+<ol>
+<li>Make changes locally (e.g., run <code>hexo new "My New Post"</code>).</li>
+<li>Commit your changes:
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-am<span class="w"> </span><span class="s2">&quot;Added new blog post and updated layout.&quot;</span>
+</span></code></pre></div></li>
+<li>Push to GitHub:
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+</span></code></pre></div></li>
+<li>Netlify automatically detects the push, runs the <code>hexo generate</code> command, and deploys the new version live.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.sections", "navigation.instant", "content.code.copy", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

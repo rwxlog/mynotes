@@ -1,0 +1,2054 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="File archiver for extremely high compression">
+      
+      
+      
+        <link rel="canonical" href="https://rwxlog.github.io/mynotes/LinuxNotes/paclist/">
+      
+      
+        <link rel="prev" href="../../HunterNotes/samplenote/">
+      
+      
+        <link rel="next" href="../../TechNotes/GitHub/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>paclist - My Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="My Notes" class="md-header__button md-logo" aria-label="My Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              paclist
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="pink"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Notes" class="md-nav__button md-logo" aria-label="My Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Career Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Career Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CareerNotes/90-day-cybersecurity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    90 Day Cybersecurity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CareerNotes/90-day-wordpress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    90 Day WordPress
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Cyber Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Cyber Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CyberNotes/samplenote/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sample Note
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Dev Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Dev Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DevNotes/LAMP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LAMP Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DevNotes/phpMyAdmin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    phpMyAdmin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DevNotes/wp-backup-auto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WP Backup (Auto)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DevNotes/wp-backup-compressed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WP Backup (Compressed)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DevNotes/wp-backup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WP Backup (Manual)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DevNotes/wp-database-cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WP Database CLI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DevNotes/wp-database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WP Database GUI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DevNotes/wp-restore/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WP Restore
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Hunter Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Hunter Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HunterNotes/samplenote/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sample Note
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Linux Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Linux Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    paclist
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tech Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Tech Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TechNotes/GitHub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GitHub
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Web Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Web Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WebNotes/markdown-links/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Markdown Links
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WebNotes/markdown-styling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Markdown Styling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WebNotes/programing-concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programing Concepts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WebNotes/programing-basics.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programing Basics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WebNotes/share-button/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Share Button
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WebNotes/site-structure-noted/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Site Structure (Noted)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WebNotes/site-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Site Structure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    SSG Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            SSG Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SSGNotes/astro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Astro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SSGNotes/docsify/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docsify
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SSGNotes/docusaurus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docusaurus
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SSGNotes/eleventy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Eleventy (11ty)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SSGNotes/gatsby/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gatsby
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SSGNotes/gridsome/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gridsome
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SSGNotes/hexo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hexo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SSGNotes/hugo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hugo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SSGNotes/jekyll/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Jekyll
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SSGNotes/lektor.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lektor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SSGNotes/mkdocs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MkDocs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SSGNotes/mkdocs-gh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MkDocs (GitHub Deploy)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SSGNotes/next-js/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Next.js
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SSGNotes/nuxt-js/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nuxt.js
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SSGNotes/pelican/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pelican
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SSGNotes/vite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vite
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SSGNotes/vuepress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VuePress
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Other Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Other Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OtherNotes/samplenote/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sample Note
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>paclist</h1>
+
+<p>Name: alacritty<br />
+Description: A cross-platform, GPU-accelerated terminal emulator  </p>
+<p>Name: android-tools<br />
+Description: Android platform tools  </p>
+<p>Name: apache<br />
+Description: A high performance Unix-based HTTP server  </p>
+<p>Name: audacity<br />
+Description: A program that lets you manipulate digital audio waveforms  </p>
+<p>Name: autoconf<br />
+Description: A GNU tool for automatically configuring source code  </p>
+<p>Name: automake<br />
+Description: A GNU tool for automatically creating Makefiles  </p>
+<p>Name: base<br />
+Description: Minimal package set to define a basic Arch Linux installation  </p>
+<p>Name: base-devel<br />
+Description: Basic tools to build Arch Linux packages  </p>
+<p>Name: bat<br />
+Description: Cat clone with syntax highlighting and git integration  </p>
+<p>Name: bison<br />
+Description: The GNU general-purpose parser generator  </p>
+<p>Name: brave-bin<br />
+Description: Web browser that blocks ads and trackers by default (binary release)  </p>
+<p>Name: breeze-icons<br />
+Description: Breeze icon theme  </p>
+<p>Name: bspwm<br />
+Description: Tiling window manager based on binary space partitioning  </p>
+<p>Name: chromium<br />
+Description: A web browser built for speed, simplicity, and security  </p>
+<p>Name: cmatrix<br />
+Description: A curses-based scrolling 'Matrix'-like screen  </p>
+<p>Name: code<br />
+Description: The Open Source build of Visual Studio Code (vscode) editor  </p>
+<p>Name: code-features<br />
+Description: Unblock some features in Code OSS  </p>
+<p>Name: dash<br />
+Description: POSIX compliant shell that aims to be as small as possible  </p>
+<p>Name: efibootmgr<br />
+Description: Linux user-space application to modify the EFI Boot Manager  </p>
+<p>Name: exo<br />
+Description: Application library for the Xfce desktop environment  </p>
+<p>Name: expac<br />
+Description: alpm data (pacman database) extraction utility  </p>
+<p>Name: fakeroot<br />
+Description: Tool for simulating superuser privileges  </p>
+<p>Name: firefox<br />
+Description: Fast, Private &amp; Safe Web Browser  </p>
+<p>Name: flameshot<br />
+Description: Powerful yet simple to use screenshot software  </p>
+<p>Name: flex<br />
+Description: A tool for generating text-scanning programs  </p>
+<p>Name: garcon<br />
+Description: Freedesktop.org compliant menu library  </p>
+<p>Name: gcc<br />
+Description: The GNU Compiler Collection - C and C++ frontends  </p>
+<p>Name: ghostwriter<br />
+Description: Aesthetic, distraction-free Markdown editor  </p>
+<p>Name: gimp<br />
+Description: GNU Image Manipulation Program  </p>
+<p>Name: git<br />
+Description: the fast distributed version control system  </p>
+<p>Name: glow<br />
+Description: Command-line markdown renderer  </p>
+<p>Name: gnome-keyring<br />
+Description: Stores passwords and encryption keys  </p>
+<p>Name: gparted<br />
+Description: A Partition Magic clone, frontend to GNU Parted  </p>
+<p>Name: gptfdisk<br />
+Description: A text-mode partitioning tool that works on GUID Partition Table (GPT) disks  </p>
+<p>Name: grub<br />
+Description: GNU GRand Unified Bootloader (2)  </p>
+<p>Name: gtk-theme-arc-gruvbox-git<br />
+Description: A flat, grey gruvboxed theme with transparent elements for GTK 3, GTK 2 and gnome-shell. Latest commit from the master branch on Github.  </p>
+<p>Name: gvfs<br />
+Description: Virtual filesystem implementation for GIO  </p>
+<p>Name: gvfs-mtp<br />
+Description: Virtual filesystem implementation for GIO - MTP backend (Android, media player)  </p>
+<p>Name: htop<br />
+Description: Interactive process viewer  </p>
+<p>Name: hugo<br />
+Description: Fast and Flexible Static Site Generator in Go  </p>
+<p>Name: ibus<br />
+Description: Intelligent input bus for Linux/Unix  </p>
+<p>Name: ibus-avro-git<br />
+Description: Avro Phonetic Bangla typing for Linux  </p>
+<p>Name: ibus-m17n<br />
+Description: M17N engine for IBus  </p>
+<p>Name: inkscape<br />
+Description: Professional vector graphics editor  </p>
+<p>Name: kdenlive<br />
+Description: A non-linear video editor for Linux using the MLT video framework  </p>
+<p>Name: keepassxc<br />
+Description: Cross-platform community-driven port of Keepass password manager  </p>
+<p>Name: kitty<br />
+Description: A modern, hackable, featureful, OpenGL-based terminal emulator  </p>
+<p>Name: lf-git<br />
+Description: lf is a terminal file manager written in Go  </p>
+<p>Name: libreoffice-still<br />
+Description: LibreOffice maintenance branch  </p>
+<p>Name: linux-firmware<br />
+Description: Firmware files for Linux - Default set  </p>
+<p>Name: linux-lts<br />
+Description: The LTS Linux kernel and modules  </p>
+<p>Name: linux-lts-headers<br />
+Description: Headers and scripts for building modules for the LTS Linux kernel  </p>
+<p>Name: m4<br />
+Description: The GNU macro processor  </p>
+<p>Name: make<br />
+Description: GNU make utility to maintain groups of programs  </p>
+<p>Name: man-db<br />
+Description: A utility for reading man pages  </p>
+<p>Name: man-pages<br />
+Description: Linux man pages  </p>
+<p>Name: mariadb<br />
+Description: Fast SQL database server, derived from MySQL  </p>
+<p>Name: mediainfo<br />
+Description: Supplies technical and tag information about media files (CLI interface)  </p>
+<p>Name: moreutils<br />
+Description: A growing collection of the unix tools that nobody thought to write thirty years ago  </p>
+<p>Name: mousepad<br />
+Description: Simple text editor for Xfce  </p>
+<p>Name: mpc<br />
+Description: Minimalist command line interface to MPD  </p>
+<p>Name: mpd<br />
+Description: Flexible, powerful, server-side application for playing music  </p>
+<p>Name: mpv<br />
+Description: a free, open source, and cross-platform media player  </p>
+<p>Name: mugshot<br />
+Description: User Management Utility for Linux  </p>
+<p>Name: mupdf<br />
+Description: Lightweight PDF and XPS viewer  </p>
+<p>Name: mupdf-tools<br />
+Description: Tools for Lightweight PDF and XPS viewer  </p>
+<p>Name: ncmpcpp<br />
+Description: Featureful ncurses based MPD client inspired by ncmpc  </p>
+<p>Name: neofetch<br />
+Description: A CLI system information tool written in BASH that supports displaying images.  </p>
+<p>Name: neovim<br />
+Description: Fork of Vim aiming to improve user experience, plugins, and GUIs  </p>
+<p>Name: network-manager-applet<br />
+Description: Applet for managing network connections  </p>
+<p>Name: networkmanager<br />
+Description: Network connection manager and user applications  </p>
+<p>Name: nm-connection-editor<br />
+Description: NetworkManager GUI connection editor and widgets  </p>
+<p>Name: nmap<br />
+Description: Utility for network discovery and security auditing  </p>
+<p>Name: noto-fonts-emoji<br />
+Description: Google Noto Color Emoji font  </p>
+<p>Name: npm<br />
+Description: JavaScript package manager  </p>
+<p>Name: nsxiv<br />
+Description: Neo (or New or Not) Simple (or Small or Suckless) X Image Viewer  </p>
+<p>Name: obs-studio<br />
+Description: Free, open source software for live streaming and recording  </p>
+<p>Name: ollama<br />
+Description: Create, run and share large language models (LLMs)  </p>
+<p>Name: openshot<br />
+Description: An award-winning free and open-source video editor  </p>
+<p>Name: pacman-contrib<br />
+Description: Contributed scripts and tools for pacman systems  </p>
+<p>Name: parole<br />
+Description: Modern media player based on the GStreamer framework  </p>
+<p>Name: patch<br />
+Description: A utility to apply patch files to original sources  </p>
+<p>Name: pavucontrol<br />
+Description: PulseAudio Volume Control  </p>
+<p>Name: php<br />
+Description: A general-purpose scripting language that is especially suited to web development  </p>
+<p>Name: php-apache<br />
+Description: Apache SAPI for PHP  </p>
+<p>Name: phpmyadmin<br />
+Description: PHP web-based tool to administrate MySQL and MariaDB databases over the web  </p>
+<p>Name: pkgconf<br />
+Description: Package compiler and linker metadata toolkit  </p>
+<p>Name: polybar<br />
+Description: A fast and easy-to-use status bar  </p>
+<p>Name: pulseaudio<br />
+Description: A featureful, general-purpose sound server  </p>
+<p>Name: pulsemixer<br />
+Description: CLI and curses mixer for pulseaudio  </p>
+<p>Name: python-ipykernel<br />
+Description: The ipython kernel for Jupyter  </p>
+<p>Name: python-pip<br />
+Description: The PyPA recommended tool for installing Python packages  </p>
+<p>Name: reflector<br />
+Description: A Python 3 module and script to retrieve and filter the latest Pacman mirror list.  </p>
+<p>Name: retext<br />
+Description: A simple editor for Markdown and ReStructuredText markup languages  </p>
+<p>Name: ristretto<br />
+Description: A fast and lightweight picture viewer for Xfce  </p>
+<p>Name: rsync<br />
+Description: A fast and versatile file copying tool for remote and local files  </p>
+<p>Name: rxvt-unicode<br />
+Description: Unicode enabled rxvt-clone terminal emulator (urxvt)  </p>
+<p>Name: sudo<br />
+Description: Give certain users the ability to run some commands as root  </p>
+<p>Name: sxhkd<br />
+Description: Simple X hotkey daemon  </p>
+<p>Name: sxiv<br />
+Description: Simple X Image Viewer  </p>
+<p>Name: telegram-desktop<br />
+Description: Official Telegram Desktop client  </p>
+<p>Name: terminus-font<br />
+Description: Monospace bitmap font (for X11 and console)  </p>
+<p>Name: texinfo<br />
+Description: GNU documentation system for on-line information and printed output  </p>
+<p>Name: thunar<br />
+Description: Modern, fast and easy-to-use file manager for Xfce  </p>
+<p>Name: thunar-archive-plugin<br />
+Description: Adds archive operations to the Thunar file context menus  </p>
+<p>Name: thunar-media-tags-plugin<br />
+Description: Adds special features for media files to the Thunar File Manager  </p>
+<p>Name: thunar-volman<br />
+Description: Automatic management of removable drives and media for Thunar  </p>
+<p>Name: tumbler<br />
+Description: Thumbnail service implementing the thumbnail management D-Bus specification  </p>
+<p>Name: ueberzugpp<br />
+Description: Command line utility which allows to display images in the terminal, written in C++  </p>
+<p>Name: unclutter<br />
+Description: A small program for hiding the mouse cursor  </p>
+<p>Name: unrar<br />
+Description: The RAR uncompression program  </p>
+<p>Name: unzip<br />
+Description: For extracting and viewing files in .zip archives  </p>
+<p>Name: virtualbox<br />
+Description: Powerful x86 virtualization for enterprise as well as home use  </p>
+<p>Name: wget<br />
+Description: Network utility to retrieve files from the web  </p>
+<p>Name: xarchiver<br />
+Description: GTK+ frontend to various command line archivers  </p>
+<p>Name: xbindkeys<br />
+Description: Launch shell commands with your keyboard or your mouse under X  </p>
+<p>Name: xdotool<br />
+Description: Command-line X11 automation tool  </p>
+<p>Name: xfburn<br />
+Description: A simple CD/DVD burning tool based on libburnia libraries  </p>
+<p>Name: xfce4-appfinder<br />
+Description: Application launcher and finder  </p>
+<p>Name: xfce4-artwork<br />
+Description: Backdrops for the Xfce4 desktop  </p>
+<p>Name: xfce4-battery-plugin<br />
+Description: A battery monitor plugin for the Xfce panel  </p>
+<p>Name: xfce4-clipman-plugin<br />
+Description: A clipboard plugin for the Xfce4 panel  </p>
+<p>Name: xfce4-cpufreq-plugin<br />
+Description: CPU frequency and governor plugin for the Xfce4 panel  </p>
+<p>Name: xfce4-cpugraph-plugin<br />
+Description: Graphical representation of the CPU load  </p>
+<p>Name: xfce4-datetime-plugin<br />
+Description: A date and time display plugin for the Xfce panel  </p>
+<p>Name: xfce4-dict<br />
+Description: A dictionary plugin for the Xfce panel  </p>
+<p>Name: xfce4-diskperf-plugin<br />
+Description: Displays instant disk/partition performance in the Xfce4 panel  </p>
+<p>Name: xfce4-eyes-plugin<br />
+Description: A rolling eyes (following mouse pointer) plugin for the Xfce panel  </p>
+<p>Name: xfce4-fsguard-plugin<br />
+Description: File system usage monitor plugin for the Xfce4 panel  </p>
+<p>Name: xfce4-genmon-plugin<br />
+Description: plugin that monitors customizable programs stdout for the Xfce4 panel  </p>
+<p>Name: xfce4-mailwatch-plugin<br />
+Description: Multi-protocol, multi-mailbox mail watcher for the Xfce4 panel  </p>
+<p>Name: xfce4-mount-plugin<br />
+Description: Mount/umount utility for the Xfce4 panel  </p>
+<p>Name: xfce4-mpc-plugin<br />
+Description: Control the Music Player Daemon from the Xfce4 panel  </p>
+<p>Name: xfce4-netload-plugin<br />
+Description: A netload plugin for the Xfce panel  </p>
+<p>Name: xfce4-notes-plugin<br />
+Description: Notes plugin for the Xfce panel  </p>
+<p>Name: xfce4-notifyd<br />
+Description: Notification daemon for the Xfce desktop  </p>
+<p>Name: xfce4-panel<br />
+Description: Panel for the Xfce desktop environment  </p>
+<p>Name: xfce4-power-manager<br />
+Description: Power Manager for Xfce  </p>
+<p>Name: xfce4-pulseaudio-plugin<br />
+Description: Pulseaudio plugin for the Xfce4 panel  </p>
+<p>Name: xfce4-screensaver<br />
+Description: Xfce Screensaver  </p>
+<p>Name: xfce4-screenshooter<br />
+Description: An application to take screenshots  </p>
+<p>Name: xfce4-sensors-plugin<br />
+Description: Sensors plugin for the Xfce panel  </p>
+<p>Name: xfce4-session<br />
+Description: Xfce's session manager  </p>
+<p>Name: xfce4-settings<br />
+Description: Xfce's Configuration System  </p>
+<p>Name: xfce4-smartbookmark-plugin<br />
+Description: Allows you to send requests directly to your browser and perform a custom search  </p>
+<p>Name: xfce4-systemload-plugin<br />
+Description: System load plugin for the Xfce panel  </p>
+<p>Name: xfce4-taskmanager<br />
+Description: Easy to use task manager  </p>
+<p>Name: xfce4-terminal<br />
+Description: A modern terminal emulator primarily for the Xfce desktop environment  </p>
+<p>Name: xfce4-time-out-plugin<br />
+Description: Take a break from your computer with this plugin for Xfce4  </p>
+<p>Name: xfce4-timer-plugin<br />
+Description: Plugin to track time for the Xfce4 panel  </p>
+<p>Name: xfce4-verve-plugin<br />
+Description: Command line plugin for the Xfce panel  </p>
+<p>Name: xfce4-wavelan-plugin<br />
+Description: Plugin to monitor wifi connectivity for the Xfce4 panel  </p>
+<p>Name: xfce4-weather-plugin<br />
+Description: A weather plugin for the Xfce4 panel  </p>
+<p>Name: xfce4-whiskermenu-plugin<br />
+Description: Menu for Xfce4  </p>
+<p>Name: xfce4-xkb-plugin<br />
+Description: Plugin to switch keyboard layouts for the Xfce4 panel  </p>
+<p>Name: xfconf<br />
+Description: D-Bus-based configuration storage system  </p>
+<p>Name: xfdesktop<br />
+Description: Xfce's desktop manager  </p>
+<p>Name: xfwm4<br />
+Description: Xfce's window manager  </p>
+<p>Name: xfwm4-themes<br />
+Description: A set of additional themes for the Xfce window manager  </p>
+<p>Name: xorg-server<br />
+Description: Xorg X server  </p>
+<p>Name: xorg-xkill<br />
+Description: Kill a client by its X resource  </p>
+<p>Name: xorg-xwininfo<br />
+Description: Command-line utility to print information about windows on an X server  </p>
+<p>Name: xwallpaper<br />
+Description: Wallpaper setting utility for X  </p>
+<p>Name: yay<br />
+Description: Yet another yogurt. Pacman wrapper and AUR helper written in go.  </p>
+<p>Name: youtube-dl<br />
+Description: A command-line program to download videos from YouTube.com and a few more sites  </p>
+<p>Name: yt-dlg<br />
+Description: A cross platform front-end GUI of the popular yt-dlp written in wxPython (maintained fork of youtube-dl-gui)  </p>
+<p>Name: yt-dlp<br />
+Description: A youtube-dl fork with additional features and fixes  </p>
+<p>Name: zathura<br />
+Description: Minimalistic document viewer  </p>
+<p>Name: zathura-pdf-mupdf<br />
+Description: PDF support for Zathura (MuPDF backend) (Supports PDF, ePub, and OpenXPS)  </p>
+<p>Name: zip<br />
+Description: Compressor/archiver for creating and modifying zipfiles  </p>
+<p>Name: zsh<br />
+Description: A very advanced and programmable command interpreter (shell) for UNIX  </p>
+<p>Name: zsh-fast-syntax-highlighting-git<br />
+Description: Optimized and extended zsh-syntax-highlighting  </p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.sections", "navigation.instant", "content.code.copy", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
